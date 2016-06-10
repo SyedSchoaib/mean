@@ -29,7 +29,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
 
     $scope.create = function(isValid) {
       if (isValid) {
-        // $scope.article.permissions.push('test test');
+        // $scope.article.permissions.push('');
         var article = new Articles($scope.article);
 
         article.$save(function(response) {

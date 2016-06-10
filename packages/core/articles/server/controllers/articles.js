@@ -122,14 +122,13 @@ module.exports = function(Articles) {
          */
         all: function(req, res) {
             var query = req.acl.query('Article');
-
             query.find({}).sort('-created').populate('user', 'name username').exec(function(err, articles) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot list the articles'
                     });
                 }
-
+                console.log(articles)
                 res.json(articles)
             });
 
