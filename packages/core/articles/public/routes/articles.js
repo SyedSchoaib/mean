@@ -9,6 +9,7 @@ angular.module('mean.articles').config(['$stateProvider',
       .state('all articles', {
         url: '/articles',
         templateUrl: '/articles/views/list.html',
+        
       })
       .state('create article', {
         url: '/articles/create',

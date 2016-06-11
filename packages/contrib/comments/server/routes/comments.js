@@ -14,7 +14,7 @@ var hasAuthorization = function(req, res, next) {
 module.exports = function(Comments, app, auth, database) {
 
   app.route('/api/comments')
-    .post(auth.requiresLogin, comments.create);
+    .post(comments.create);
 
   app.route('/api/comments/parent/:parentId')
     .get(comments.fetchByParent);
